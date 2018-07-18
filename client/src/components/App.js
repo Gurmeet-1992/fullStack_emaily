@@ -2,10 +2,12 @@ import React,{Component} from 'react';
 import { BrowserRouter,Route } from 'react-router-dom';
 import Header from './header';
 import Landing from './landing';
+import Dashboard from './dashboard';
+import SurveyNew from './surveys/SurveyNew';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 
-const dashboard = () => <h2>dashboard</h2>
+const dashboard = () => <Dashboard />
 const survey = () => <h2>survey</h2>
 
 
@@ -21,8 +23,8 @@ const survey = () => <h2>survey</h2>
                 <div>
                     <Header />
                     <Route exact path='/' component={Landing} />
-                    <Route exact path='/surveys' component={dashboard}/>
-                    <Route path='/surveys/new' component={survey}/>
+                    <Route exact path='/surveys' component={Dashboard}/>
+                    <Route path='/surveys/new' component={SurveyNew}/>
                 </div>
             </BrowserRouter>
         </div>
