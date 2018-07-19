@@ -7,10 +7,6 @@ import SurveyNew from './surveys/SurveyNew';
 import {connect} from 'react-redux';
 import * as actions from '../actions';
 
-const dashboard = () => <Dashboard />
-const survey = () => <h2>survey</h2>
-
-
 
  class App extends Component{
      componentDidMount(){
@@ -20,7 +16,7 @@ const survey = () => <h2>survey</h2>
         return(
         <div className='container'>
             <BrowserRouter>
-                <div>
+                <div className='container'>
                     <Header />
                     <Route exact path='/' component={Landing} />
                     <Route exact path='/surveys' component={Dashboard}/>
